@@ -1,0 +1,121 @@
+:root {
+   --Bright-orange: hsl(31, 77%, 52%);
+   --Dark-cyan: hsl(184, 100%, 22%);
+   --Very-dark-cyan: hsl(179, 100%, 13%);
+   --Transparent-white: hsla(0, 0%, 100%, 0.75);
+   --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+   width: 100vw;
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   max-width: 800px;
+}
+
+.sedans,
+.luxury,
+.suvs {
+   display: grid;
+   padding: 50px;
+   height: 100%;
+}
+
+.sedans {
+   background-color: var(--Bright-orange);
+   border-radius: 5px 0 0 5px;
+}
+span {
+   width: 100%;
+   font-family: "Lexend Deca";
+   font-weight: 400;
+   color: var(--Transparent-white);
+   font-size: 1rem;
+}
+
+h1 {
+   font-family: "Big Shoulders Display";
+   font-weight: 700;
+   font-size: 2.5rem;
+   color: var(--Transparent-white);
+}
+
+.suvs {
+   background-color: var(--Dark-cyan);
+}
+
+.luxury {
+   background-color: var(--Very-dark-cyan);
+   border-radius: 0 5px 5px 0px;
+}
+
+a {
+   display: block;
+   border-radius: 30px;
+   width: 70%;
+   padding: 10px;
+   margin-top: 40px;
+   background-color: var(--Transparent-white);
+   text-align: center;
+   cursor: pointer;
+}
+
+a:hover {
+   background-color: transparent;
+   border: 1px solid var(--Transparent-white);
+   color: white;
+}
+
+.btn #sedans:hover {
+   color: white;
+}
+
+.btn #sedans {
+   font-family: "Lexend Deca";
+   color: var(--Bright-orange);
+}
+
+.btn #suvs {
+   color: var(--Dark-cyan);
+   font-family: "Lexend Deca";
+}
+
+.btn #suvs:hover {
+   color: var(--Transparent-white);
+}
+
+.btn #luxury {
+   color: var(--Very-dark-cyan);
+   font-family: "Lexend Deca";
+}
+.btn #luxury:hover {
+   color: var(--Transparent-white);
+}
+
+@media screen and (max-width: 500px) {
+   body {
+      height: 100vh;
+   }
+   main {
+      grid-template-columns: repeat(1, 1fr);
+      height: 90%;
+      width: 90%;
+   }
+   .sedans,
+   .suvs,
+   .luxury {
+      padding: 40px;
+      height: 80%;
+   }
+
+   .btn {
+      width: 60%;
+   }
+}
